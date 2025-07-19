@@ -14,6 +14,7 @@ In this paper, we introduce the KDDRec, which investigates the excessive denoisi
 - numpy==1.23.1
 - torch==1.11.0
 - scipy==1.9.1
+- pip install --no-index torch-scatter -f https://data.pyg.org/whl/torch-1.11.0+cu113.html
 
 ##  2. Datasets
 
