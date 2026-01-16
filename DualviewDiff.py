@@ -13,7 +13,7 @@ uniformInit = nn.init.uniform
 
 class DualviewDiffusion(nn.Module):
     def __init__(self, noise_scale, noise_min, noise_max, steps, beta_fixed=True):
-        super(MultiviewDiffusion, self).__init__()
+        super(DualviewDiffusion, self).__init__()
 
         self.noise_scale = noise_scale
         self.noise_min = noise_min
@@ -136,4 +136,5 @@ class DualviewDiffusion(nn.Module):
 
     def SNR(self, t):
         self.alphas_cumprod = self.alphas_cumprod.cuda()
+
         return self.alphas_cumprod[t] / (1 - self.alphas_cumprod[t])
